@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Samtech Cyber Café
 
-## Getting Started
+A modern, responsive marketing website for Samtech Cyber Café, built with Next.js 16 and React 19. The site showcases the café's gaming stations, services, pricing and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
 
-First, run the development server:
+## Features
+
+- Responsive layout for mobile, tablet and desktop
+- Animated hero, scroll reveal effects, marquee ticker and image lightbox
+- Mobile navigation with accessible toggle
+- Service, pricing and "how it works" sections
+- Booking form that opens WhatsApp with the visitor's details pre-filled
+- Contact links for call, WhatsApp, email and location
+- SEO metadata plus generated favicon and Open Graph image from the supplied assets
+- Reduced-motion and no-JavaScript fallbacks for reveal animations
+
+## Tech stack
+
+- Next.js 16 (App Router, Cache Components)
+- React 19
+- Plain CSS with global custom properties
+- `next/image` for optimized local images
+- ESLint 9 with `eslint-config-next`
+
+## Getting started
+
+Prerequisites: Node.js 20.9 or newer.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/app/
+  components/
+    booking-form.js    WhatsApp booking form (client component)
+    gallery.js         Photo grid and lightbox (client component)
+    reveal.js          Scroll reveal wrapper (client component)
+    site-header.js     Sticky header and mobile menu (client component)
+  globals.css          Design tokens, layout and responsive styles
+  layout.js            Root layout and metadata
+  page.js              Homepage sections and content
+  site-config.js       Business contact details and WhatsApp helper
+  icon.png             Favicon generated from public/logo.png
+  opengraph-image.png  Social preview generated from public/computers.png
+public/
+  logo.png             Brand logo
+  computers.png        Gaming floor photo
+  storefront.png       Storefront photo
+  3.png                Additional café photo
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Business details
 
-## Deploy on Vercel
+Edit `src/app/site-config.js` to change the phone number, email, location, opening hours and LinkedIn URL. The WhatsApp link is generated from `business.phone`, so updating it there updates every CTA on the site.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Content, prices and hours
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Section copy, service cards, pricing plans and steps live in `src/app/page.js`. The current prices (KSh 150/hour, KSh 900/day, KSh 6,500/month) and opening hours are sample values — replace them with confirmed business information before publishing.
+
+### Images
+
+Replace the four files in `public/` with your own photos, keeping the filenames or updating their references in `src/app/page.js`, `src/app/components/gallery.js` and `src/app/components/site-header.js`. If you change the logo or hero photo, refresh `src/app/icon.png` and `src/app/opengraph-image.png` as well.
+
+### Site URL
+
+Set `NEXT_PUBLIC_SITE_URL` in your environment so generated social metadata uses the production domain:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com npm run build
+```
+
+## Deployment
+
+The project is ready for Vercel. Connect the repository, add `NEXT_PUBLIC_SITE_URL` as an environment variable if needed, and deploy with the default Next.js settings. Verify lint and build locally first:
+
+```bash
+npm run lint && npm run build
+```
