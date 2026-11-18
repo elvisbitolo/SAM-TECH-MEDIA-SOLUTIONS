@@ -813,110 +813,6 @@ button {
   font-size: 0.75rem;
 }
 
-.pricing {
-  background: radial-gradient(circle at 50% 0%, rgba(155, 109, 255, 0.1), transparent 55%);
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  align-items: stretch;
-}
-
-.plan {
-  display: flex;
-  flex-direction: column;
-  padding: 34px 30px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(16, 19, 31, 0.78);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.plan:hover {
-  transform: translateY(-5px);
-  border-color: var(--line-strong);
-}
-
-.plan-popular {
-  border-color: rgba(53, 229, 240, 0.48);
-  background: linear-gradient(165deg, rgba(53, 229, 240, 0.1), rgba(155, 109, 255, 0.08) 55%, var(--panel));
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
-}
-
-.plan-badge {
-  align-self: flex-start;
-  margin-bottom: 14px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: var(--cyan);
-  color: #05060c;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.plan-name {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.plan-price {
-  margin: 16px 0 4px;
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 1;
-}
-
-.plan-price span {
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.plan-desc {
-  margin: 12px 0 26px;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.plan-features {
-  display: grid;
-  gap: 12px;
-  margin: 0 0 32px;
-  padding: 0;
-  list-style: none;
-}
-
-.plan-features li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  color: #d5daeb;
-  font-size: 0.9rem;
-}
-
-.plan-features svg {
-  flex: 0 0 17px;
-  width: 17px;
-  height: 17px;
-  margin-top: 4px;
-  color: var(--lime);
-}
-
-.plan .btn {
-  margin-top: auto;
-}
-
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1359,8 +1255,7 @@ button {
     gap: 44px;
   }
 
-  .services-grid,
-  .pricing-grid {
+  .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1506,7 +1401,6 @@ button {
   }
 
   .services-grid,
-  .pricing-grid,
   .steps-grid,
   .gallery-grid,
   .form-row {

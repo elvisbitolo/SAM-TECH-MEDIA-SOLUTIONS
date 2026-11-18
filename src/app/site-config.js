@@ -1,7 +1,7 @@
 export const business = {
   name: "Samtech Cyber Café",
-  phone: "254718730765",
-  phoneDisplay: "+254 718 730765",
+  phone: "254795076512",
+  phoneDisplay: "+254 795 076512",
   email: "ourusamuel244@gmail.com",
   location: "Kenya",
   hours: "Open daily · 8:00 AM – 10:00 PM",

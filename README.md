@@ -1,13 +1,14 @@
 # Samtech Cyber Café
 
-A modern, responsive marketing website for Samtech Cyber Café, built with Next.js 16 and React 19. The site showcases the café's gaming stations, services, pricing and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
+A modern, responsive marketing website for Samtech Cyber Café, built with Next.js 16 and React 19. The site showcases the café's gaming stations, services and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
 
 ## Features
 
 - Responsive layout for mobile, tablet and desktop
 - Animated hero, scroll reveal effects, marquee ticker and image lightbox
 - Mobile navigation with accessible toggle
-- Service, pricing and "how it works" sections
+- Service and "how it works" sections
+- Vercel Web Analytics integration for production traffic insights
 - Booking form that opens WhatsApp with the visitor's details pre-filled
 - Contact links for call, WhatsApp, email and location
 - SEO metadata plus generated favicon and Open Graph image from the supplied assets
@@ -71,7 +72,7 @@ Edit `src/app/site-config.js` to change the phone number, email, location, openi
 
 ### Content, prices and hours
 
-Section copy, service cards, pricing plans and steps live in `src/app/page.js`. The current prices (KSh 150/hour, KSh 900/day, KSh 6,500/month) and opening hours are sample values — replace them with confirmed business information before publishing.
+Section copy, service cards and steps live in `src/app/page.js`. Opening hours are sample values — replace them with confirmed business information before publishing.
 
 ### Images
 
@@ -87,7 +88,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com npm run build
 
 ## Deployment
 
-The project is ready for Vercel. Connect the repository, add `NEXT_PUBLIC_SITE_URL` as an environment variable if needed, and deploy with the default Next.js settings. Verify lint and build locally first:
+The project is ready for Vercel. Connect the repository, add `NEXT_PUBLIC_SITE_URL` as an environment variable if needed, enable Web Analytics in the Vercel dashboard, and deploy with the default Next.js settings. Verify lint and build locally first:
 
 ```bash
 npm run lint && npm run build

@@ -3,7 +3,7 @@ import SiteHeader from "./components/site-header";
 import Reveal from "./components/reveal";
 import Gallery from "./components/gallery";
 import BookingForm from "./components/booking-form";
-import { business, defaultBookingUrl, whatsappUrl } from "./site-config";
+import { business, defaultBookingUrl } from "./site-config";
 
 function CheckIcon() {
   return (
@@ -160,31 +160,6 @@ const services = [
     icon: <UsersIcon />,
     title: "Groups & LAN parties",
     text: "Book a block of stations for tournaments, study groups or a proper night in with friends.",
-  },
-];
-
-const plans = [
-  {
-    name: "Pay as you go",
-    price: "KSh 150",
-    unit: "/ hour",
-    text: "Flexible sessions whenever you need them.",
-    features: ["One gaming PC or workstation", "Fibre internet access", "Headset available on request", "Free Wi-Fi while you wait"],
-  },
-  {
-    name: "Day pass",
-    price: "KSh 900",
-    unit: "/ day",
-    text: "A full day of play, work and everything between.",
-    features: ["Everything in pay as you go", "Up to 8 hours of station time", "Priority station allocation", "Discounted printing"],
-    popular: true,
-  },
-  {
-    name: "Monthly pass",
-    price: "KSh 6,500",
-    unit: "/ month",
-    text: "For regulars who practically live here.",
-    features: ["Unlimited station sessions", "Reserved station on busy days", "Priority booking for groups", "Member rates on repairs"],
   },
 ];
 
@@ -404,52 +379,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section pricing" id="pricing">
-          <div className="container">
-            <Reveal className="section-head">
-              <span className="section-label">Pricing</span>
-              <h2 className="section-title">Simple rates. No surprises.</h2>
-              <p className="section-text">
-                Choose the session that fits your day. Every option includes fast internet
-                and a well-maintained station.
-              </p>
-            </Reveal>
-
-            <div className="pricing-grid">
-              {plans.map((plan, index) => (
-                <Reveal
-                  className={`plan${plan.popular ? " plan-popular" : ""}`}
-                  delay={index * 90}
-                  key={plan.name}
-                >
-                  {plan.popular && <span className="plan-badge">Most popular</span>}
-                  <h3 className="plan-name">{plan.name}</h3>
-                  <div className="plan-price">
-                    {plan.price} <span>{plan.unit}</span>
-                  </div>
-                  <p className="plan-desc">{plan.text}</p>
-                  <ul className="plan-features">
-                    {plan.features.map((feature) => (
-                      <li key={feature}>
-                        <CheckIcon />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    className={`btn ${plan.popular ? "btn-primary" : "btn-outline"} btn-block`}
-                    href={whatsappUrl(`Hi! I'd like to book the ${plan.name} plan at Samtech Cyber Café.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Choose {plan.name}
-                  </a>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="section steps">
           <div className="container">
             <Reveal className="section-head">
@@ -589,7 +518,6 @@ export default function Home() {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#gallery">Gallery</a></li>
               </ul>
             </div>
