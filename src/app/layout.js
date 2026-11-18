@@ -14,6 +14,9 @@ export const metadata = {
     "gaming PC",
     "Samtech",
   ],
+  verification: {
+    google: "EO1A_95MmyPuFD2ULeSrZ2xzliMUJEdAWtRmclDUwPo",
+  },
   openGraph: {
     title: "Samtech Cyber Café | Game. Work. Connect.",
     description:
