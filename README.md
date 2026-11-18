@@ -1,6 +1,6 @@
 # Samtech Media Solutions
 
-A modern, responsive marketing website for Samtech Media Solutions, built with Next.js 16 and React 19. The site showcases the space's gaming stations, youth ICT training, services and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
+A modern, responsive marketing website for Samtech Media Solutions, built with Next.js 16 and React 19. The site showcases the space's gaming stations, youth ICT training (over 43 graduates since 2019), services and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
 
 ## Features
 

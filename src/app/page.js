@@ -116,7 +116,7 @@ const stats = [
   { value: "40+", label: "Gaming stations" },
   { value: "1 Gbps", label: "Fibre internet" },
   { value: "7 days", label: "Open every day" },
-  { value: "Fast", label: "Booking & support" },
+  { value: "43+", label: "Graduates since 2019" },
 ];
 
 const tickerItems = [
@@ -161,7 +161,7 @@ const services = [
   {
     icon: <UsersIcon />,
     title: "Youth ICT training",
-    text: "Hands-on coaching for youths in ICT, networking, programming and solar essentials.",
+    text: "Hands-on coaching for youths in ICT, networking, programming and solar essentials. Over 43 graduates since 2019.",
   },
   {
     icon: <UsersIcon />,
@@ -333,7 +333,7 @@ export default function Home() {
                 Whether you are chasing a rank, finishing an assignment, printing a
                 document or fixing a device, you will find a clean space, fast hardware
                 and a team that actually cares. We also train youths in ICT, networking,
-                programming and solar essentials.
+                programming and solar essentials, with over 43 graduates since 2019.
               </p>
 
               <div className="feature-list">

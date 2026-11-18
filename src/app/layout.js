@@ -14,7 +14,7 @@ const jsonLd = {
       logo: `${siteUrl}/logo.png`,
       image: `${siteUrl}/computers.png`,
       description:
-        "Gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials.",
+        "Gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials, with over 43 graduates since 2019.",
       founder: { "@id": `${siteUrl}/#founder` },
       contactPoint: {
         "@type": "ContactPoint",
@@ -48,7 +48,7 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Samuel Otuoma | Samtech Media Solutions",
   description:
-    "Samtech Media Solutions in Kariobangi North, Nairobi offers gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials. Book on WhatsApp.",
+    "Samtech Media Solutions in Kariobangi North, Nairobi offers gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials, with over 43 graduates since 2019. Book on WhatsApp.",
   keywords: [
     "Samuel Otuoma",
     "Samuel Otuoma Ouru",
