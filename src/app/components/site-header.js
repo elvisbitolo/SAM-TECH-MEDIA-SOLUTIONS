@@ -25,11 +25,11 @@ export default function SiteHeader({ bookingUrl }) {
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="container header-inner">
-        <a className="brand" href="#home" aria-label="Samtech Cyber Cafe home">
+        <a className="brand" href="#home" aria-label="Samtech Media Solutions home">
           <Image
             className="brand-logo"
             src="/logo.png"
-            alt="Samtech Cyber Cafe logo"
+            alt="Samtech Media Solutions logo"
             width={92}
             height={92}
             priority

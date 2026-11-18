@@ -6,18 +6,18 @@ import Image from "next/image";
 const photos = [
   {
     src: "/computers.png",
-    alt: "High-performance gaming PCs at Samtech Cyber Cafe",
+    alt: "High-performance gaming PCs at Samtech Media Solutions",
     label: "Gaming floor",
   },
   {
     src: "/storefront.png",
-    alt: "Samtech Cyber Cafe storefront",
+    alt: "Samtech Media Solutions storefront",
     label: "Storefront",
   },
   {
     src: "/3.png",
-    alt: "Inside Samtech Cyber Cafe",
-    label: "Inside the cafe",
+    alt: "Inside Samtech Media Solutions",
+    label: "Inside the space",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Gallery() {
           className="lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label="Cafe photo viewer"
+          aria-label="Photo viewer"
           onClick={() => setSelected(null)}
         >
           <div className="lightbox-content" onClick={(event) => event.stopPropagation()}>

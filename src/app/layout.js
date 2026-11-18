@@ -9,16 +9,26 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
-      name: "Samtech Cyber Café",
+      name: business.name,
       url: siteUrl,
       logo: `${siteUrl}/logo.png`,
       image: `${siteUrl}/computers.png`,
+      description:
+        "Gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials.",
       founder: { "@id": `${siteUrl}/#founder` },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: business.phoneDisplay,
         contactType: "customer service",
         availableLanguage: "English",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Along Mama Magret Uhuru Hospital, opposite St Joel Comprehensive School",
+        addressLocality: "Kariobangi North, Dafur",
+        addressRegion: "Nairobi",
+        addressCountry: "KE",
       },
       sameAs: [business.portfolioUrl, business.linkedIn],
     },
@@ -36,15 +46,18 @@ const jsonLd = {
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Samuel Otuoma | Samtech Cyber Café",
+  title: "Samuel Otuoma | Samtech Media Solutions",
   description:
-    "Samtech Cyber Café, founded by engineer Samuel Otuoma in Kenya, offers high-performance gaming PCs, fibre internet, console stations, printing and device repairs. Book on WhatsApp.",
+    "Samtech Media Solutions in Kariobangi North, Nairobi offers gaming, fibre internet, printing, device repair and youth training in ICT, networking, programming and solar essentials. Book on WhatsApp.",
   keywords: [
     "Samuel Otuoma",
     "Samuel Otuoma Ouru",
-    "cyber cafe Kenya",
-    "gaming cafe",
-    "internet cafe",
+    "Samtech Media Solutions",
+    "youth ICT training Kenya",
+    "networking training Kenya",
+    "programming training Kenya",
+    "solar essentials training Kenya",
+    "Kariobangi North",
     "PS5 gaming",
     "gaming PC",
     "Samtech",
@@ -53,16 +66,17 @@ export const metadata = {
     google: "EO1A_95MmyPuFD2ULeSrZ2xzliMUJEdAWtRmclDUwPo",
   },
   openGraph: {
-    title: "Samuel Otuoma | Samtech Cyber Café",
+    title: "Samuel Otuoma | Samtech Media Solutions",
     description:
-      "Founded by engineer Samuel Otuoma in Kenya. High-performance PCs, fibre internet and a space built for players, students and creators.",
+      "Founded by engineer Samuel Otuoma in Kariobangi North. Gaming, fibre internet and hands-on youth training in ICT, networking, programming and solar essentials.",
     type: "website",
     locale: "en_KE",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samuel Otuoma | Samtech Cyber Café",
-    description: "Book your station at Samuel Otuoma's Samtech Cyber Café in Kenya.",
+    title: "Samuel Otuoma | Samtech Media Solutions",
+    description:
+      "Book a slot at Samuel Otuoma's Samtech Media Solutions in Kariobangi North.",
   },
 };
 

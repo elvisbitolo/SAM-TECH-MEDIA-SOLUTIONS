@@ -9,6 +9,7 @@ const services = [
   "Internet / workstation",
   "Printing & scanning",
   "Device repair",
+  "Youth ICT training",
   "Group booking / LAN party",
 ];
 
@@ -20,7 +21,7 @@ export default function BookingForm() {
     const data = new FormData(event.currentTarget);
 
     const message = [
-      "Hi Samtech Cyber Café! I'd like to book a slot.",
+      "Hi Samtech Media Solutions! I'd like to book a slot.",
       `Name: ${data.get("name")}`,
       `Phone: ${data.get("phone")}`,
       `Date: ${data.get("date")}`,

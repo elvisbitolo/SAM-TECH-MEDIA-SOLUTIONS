@@ -1,13 +1,13 @@
-# Samtech Cyber Café
+# Samtech Media Solutions
 
-A modern, responsive marketing website for Samtech Cyber Café, built with Next.js 16 and React 19. The site showcases the café's gaming stations, services and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
+A modern, responsive marketing website for Samtech Media Solutions, built with Next.js 16 and React 19. The site showcases the space's gaming stations, youth ICT training, services and gallery, and lets visitors send a pre-filled booking request directly on WhatsApp.
 
 ## Features
 
 - Responsive layout for mobile, tablet and desktop
 - Animated hero, scroll reveal effects, marquee ticker and image lightbox
 - Mobile navigation with accessible toggle
-- Service and "how it works" sections
+- Service, training and "how it works" sections
 - Vercel Web Analytics integration for production traffic insights
 - Booking form that opens WhatsApp with the visitor's details pre-filled
 - Contact links for call, WhatsApp, email and location
@@ -64,7 +64,7 @@ public/
   logo.png             Brand logo
   computers.png        Gaming floor photo
   storefront.png       Storefront photo
-  3.png                Additional café photo
+  3.png                Additional space photo
 ```
 
 ## Customization
@@ -83,7 +83,7 @@ Replace the four files in `public/` with your own photos, keeping the filenames 
 
 ### Site URL
 
-Social metadata, `robots.txt` and `sitemap.xml` default to `https://samtech-cyber-cafe.vercel.app`. Set `NEXT_PUBLIC_SITE_URL` in your environment if you deploy to a different domain:
+Social metadata, `robots.txt` and `sitemap.xml` default to the current deployment URL set in `src/app/site-url.js`. Set `NEXT_PUBLIC_SITE_URL` in your environment if you deploy to a different domain:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.com npm run build

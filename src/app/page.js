@@ -125,6 +125,8 @@ const tickerItems = [
   "Fibre internet",
   "Print & scan",
   "Device repair",
+  "Youth training",
+  "Solar essentials",
   "LAN parties",
   "Streaming",
   "Online exams",
@@ -155,6 +157,11 @@ const services = [
     icon: <RepairIcon />,
     title: "Device repair",
     text: "Screen and battery replacements, diagnostics and gadget care from experienced engineers.",
+  },
+  {
+    icon: <UsersIcon />,
+    title: "Youth ICT training",
+    text: "Hands-on coaching for youths in ICT, networking, programming and solar essentials.",
   },
   {
     icon: <UsersIcon />,
@@ -194,7 +201,7 @@ export default function Home() {
             <div className="hero-copy">
               <span className="badge">
                 <span className="badge-dot" />
-                Open daily · {business.location}
+                Open daily · {business.area}
               </span>
               <h1 className="hero-title">
                 Game harder.
@@ -220,7 +227,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a className="btn btn-outline" href="#gallery">
-                  Explore the café
+                  Explore the space
                 </a>
               </div>
               <div className="hero-perks">
@@ -238,7 +245,7 @@ export default function Home() {
                 <Image
                   className="hero-image"
                   src="/computers.png"
-                  alt="Gaming computers set up at Samtech Cyber Café"
+                  alt="Gaming computers set up at Samtech Media Solutions"
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
                   priority
@@ -300,7 +307,7 @@ export default function Home() {
                 <Image
                   className="about-image"
                   src="/storefront.png"
-                  alt="The front of Samtech Cyber Café"
+                  alt="The front of Samtech Media Solutions"
                   fill
                   sizes="(max-width: 900px) 100vw, 45vw"
                 />
@@ -314,10 +321,10 @@ export default function Home() {
             <Reveal className="about-copy" delay={120}>
               <span className="section-label">About us</span>
               <h2 className="section-title">
-                More than a café. <span className="gradient-text">Your second setup.</span>
+                More than a hangout. <span className="gradient-text">Your second setup.</span>
               </h2>
               <p className="section-text">
-                Samtech Cyber Café was built by engineer and entrepreneur Samuel Otuoma
+                Samtech Media Solutions was built by engineer and entrepreneur Samuel Otuoma
                 Ouru with one idea: bring the reliability of professional engineering to a
                 place where people play, work and connect. Every station, connection and
                 service is set up to simply work when you need it.
@@ -325,7 +332,8 @@ export default function Home() {
               <p className="section-text" style={{ marginTop: 16 }}>
                 Whether you are chasing a rank, finishing an assignment, printing a
                 document or fixing a device, you will find a clean space, fast hardware
-                and a team that actually cares.
+                and a team that actually cares. We also train youths in ICT, networking,
+                programming and solar essentials.
               </p>
 
               <div className="feature-list">
@@ -347,7 +355,7 @@ export default function Home() {
                   <span className="feature-icon"><UsersIcon /></span>
                   <div>
                     <h3>A community hub</h3>
-                    <p>Meet players, team up for tournaments and make the café your base.</p>
+                    <p>Meet players, team up for tournaments and make the space your base.</p>
                   </div>
                 </div>
               </div>
@@ -378,8 +386,9 @@ export default function Home() {
               <span className="section-label">What we offer</span>
               <h2 className="section-title">Everything you need under one roof.</h2>
               <p className="section-text">
-                Come for the gaming, stay for the internet, printing, repairs and the
-                people. One visit covers the whole list.
+                Come for the gaming, stay for the internet, printing, repairs and youth
+                training in ICT, networking, programming and solar essentials. One visit
+                covers the whole list.
               </p>
             </Reveal>
 
@@ -453,8 +462,8 @@ export default function Home() {
               <span className="section-label">Contact</span>
               <h2 className="section-title">Come say hello.</h2>
               <p className="section-text" style={{ marginBottom: 12 }}>
-                Questions about stations, prices or group bookings? Reach out – we reply
-                fast.
+                Questions about stations, training or group bookings? Reach out – we
+                reply fast.
               </p>
 
               <a className="contact-card" href={`tel:${business.phone}`}>
@@ -510,11 +519,11 @@ export default function Home() {
         <div className="container">
           <div className="footer-grid">
             <div>
-              <a className="brand" href="#home" aria-label="Samtech Cyber Cafe home">
+              <a className="brand" href="#home" aria-label="Samtech Media Solutions home">
                 <Image
                   className="brand-logo"
                   src="/logo.png"
-                  alt="Samtech Cyber Cafe logo"
+                  alt="Samtech Media Solutions logo"
                   width={92}
                   height={92}
                 />
@@ -524,8 +533,8 @@ export default function Home() {
                 </span>
               </a>
               <p className="footer-text">
-                Game. Work. Connect. A fast, friendly cyber café built for the way you
-                play and work.
+                Game. Work. Connect. A fast, friendly space built for the way you play,
+                work and learn.
               </p>
             </div>
 
@@ -548,6 +557,7 @@ export default function Home() {
                 <li><a href="#services">Fibre internet</a></li>
                 <li><a href="#services">Printing & scanning</a></li>
                 <li><a href="#services">Device repair</a></li>
+                <li><a href="#services">Youth ICT training</a></li>
               </ul>
             </div>
 
@@ -557,6 +567,7 @@ export default function Home() {
                 <li><a href={`tel:${business.phone}`}>{business.phoneDisplay}</a></li>
                 <li><a href={`mailto:${business.email}`}>{business.email}</a></li>
                 <li><span>{business.hours}</span></li>
+                <li><span>{business.location}</span></li>
               </ul>
               <div className="socials" style={{ marginTop: 18 }}>
                 <a
@@ -587,8 +598,8 @@ export default function Home() {
           </div>
 
           <div className="footer-bottom">
-            <span>© 2026 Samtech Cyber Café. All rights reserved.</span>
-            <span>Built by Samtechmedia Solutions.</span>
+            <span>© 2026 Samtech Media Solutions. All rights reserved.</span>
+            <span>Built by Samtech Media Solutions.</span>
           </div>
         </div>
       </footer>
