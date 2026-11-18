@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GraduationCap, Sparkles } from "lucide-react";
 import SiteHeader from "./components/site-header";
 import Reveal from "./components/reveal";
 import Gallery from "./components/gallery";
@@ -159,9 +160,10 @@ const services = [
     text: "Screen and battery replacements, diagnostics and gadget care from experienced engineers.",
   },
   {
-    icon: <UsersIcon />,
+    icon: <GraduationCap />,
     title: "Youth ICT training",
     text: "Hands-on coaching for youths in ICT, networking, programming and solar essentials. Over 43 graduates since 2019.",
+    featured: true,
   },
   {
     icon: <UsersIcon />,
@@ -292,7 +294,10 @@ export default function Home() {
               <div className="ticker-item" key={copy}>
                 {tickerItems.map((item) => (
                   <span key={`${copy}-${item}`}>
-                    {item} <span>✦</span>
+                    {item}{" "}
+                    <span>
+                      <Sparkles size={12} strokeWidth={2.5} aria-hidden="true" />
+                    </span>
                   </span>
                 ))}
               </div>
@@ -394,7 +399,11 @@ export default function Home() {
 
             <div className="services-grid">
               {services.map((service, index) => (
-                <Reveal className="service-card" delay={index * 70} key={service.title}>
+                <Reveal
+                  className={`service-card${service.featured ? " service-card-featured" : ""}`}
+                  delay={index * 70}
+                  key={service.title}
+                >
                   <span className="service-number">0{index + 1}</span>
                   <span className="service-icon">{service.icon}</span>
                   <h3 className="service-title">{service.title}</h3>
