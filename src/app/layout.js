@@ -2,7 +2,9 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://samtech-cyber-cafe.vercel.app"
+  ),
   title: "Samtech Cyber Café | Game. Work. Connect.",
   description:
     "High-performance gaming PCs, fibre-fast internet, console stations and printing services at Samtech Cyber Café in Kenya. Book your station in seconds.",

@@ -11,7 +11,7 @@ A modern, responsive marketing website for Samtech Cyber Café, built with Next.
 - Vercel Web Analytics integration for production traffic insights
 - Booking form that opens WhatsApp with the visitor's details pre-filled
 - Contact links for call, WhatsApp, email and location
-- SEO metadata plus generated favicon and Open Graph image from the supplied assets
+- SEO metadata, generated favicon, Open Graph image and `sitemap.xml`
 - Reduced-motion and no-JavaScript fallbacks for reveal animations
 
 ## Tech stack
@@ -55,6 +55,7 @@ src/app/
   layout.js            Root layout and metadata
   page.js              Homepage sections and content
   site-config.js       Business contact details and WhatsApp helper
+  sitemap.js           Generated sitemap.xml with the production domain
   icon.png             Favicon generated from public/logo.png
   opengraph-image.png  Social preview generated from public/computers.png
 public/
@@ -70,7 +71,7 @@ public/
 
 Edit `src/app/site-config.js` to change the phone number, email, location, opening hours and LinkedIn URL. The WhatsApp link is generated from `business.phone`, so updating it there updates every CTA on the site.
 
-### Content, prices and hours
+### Content and hours
 
 Section copy, service cards and steps live in `src/app/page.js`. Opening hours are sample values — replace them with confirmed business information before publishing.
 
@@ -80,7 +81,7 @@ Replace the four files in `public/` with your own photos, keeping the filenames 
 
 ### Site URL
 
-Set `NEXT_PUBLIC_SITE_URL` in your environment so generated social metadata uses the production domain:
+Both social metadata and `sitemap.xml` default to `https://samtech-cyber-cafe.vercel.app`. Set `NEXT_PUBLIC_SITE_URL` in your environment if you deploy to a different domain:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.com npm run build
