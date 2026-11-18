@@ -351,6 +351,23 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <a
+                className="founder-card"
+                href={business.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="founder-mark"><RepairIcon /></span>
+                <span className="founder-copy">
+                  <span className="founder-label">Meet the founder</span>
+                  <span className="founder-name">Samuel Otuoma Ouru — Engineer & Entrepreneur</span>
+                  <span className="founder-desc">Explore his engineering portfolio</span>
+                </span>
+                <svg className="founder-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
             </Reveal>
           </div>
         </section>
@@ -519,6 +536,7 @@ export default function Home() {
                 <li><a href="#about">About us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href={business.portfolioUrl} target="_blank" rel="noopener noreferrer">Founder portfolio</a></li>
               </ul>
             </div>
 

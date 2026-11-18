@@ -6,6 +6,7 @@ export const business = {
   location: "Kenya",
   hours: "Open daily · 8:00 AM – 10:00 PM",
   linkedIn: "https://www.linkedin.com/in/samuel-ouru-92383a1b1/",
+  portfolioUrl: "https://samtechmedia.vercel.app",
 };
 
 export function whatsappUrl(message) {
