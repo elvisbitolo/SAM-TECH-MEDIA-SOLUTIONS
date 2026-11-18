@@ -359,11 +359,11 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <span className="founder-mark"><RepairIcon /></span>
-                <span className="founder-copy">
+                <div className="founder-copy">
                   <span className="founder-label">Meet the founder</span>
-                  <span className="founder-name">Samuel Otuoma Ouru — Engineer & Entrepreneur</span>
+                  <h3 className="founder-name">Samuel Otuoma Ouru — Engineer & Entrepreneur</h3>
                   <span className="founder-desc">Explore his engineering portfolio</span>
-                </span>
+                </div>
                 <svg className="founder-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

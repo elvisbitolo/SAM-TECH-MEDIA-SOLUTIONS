@@ -776,6 +776,7 @@ button {
 }
 
 .founder-name {
+  margin: 0;
   font-size: 0.98rem;
   font-weight: 680;
 }
