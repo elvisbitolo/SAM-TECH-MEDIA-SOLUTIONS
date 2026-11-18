@@ -520,7 +520,7 @@ export default function Home() {
                 />
                 <span className="brand-copy">
                   <span className="brand-name">Samtech</span>
-                  <span className="brand-sub">Cyber Café</span>
+                  <span className="brand-sub">Media Solutions</span>
                 </span>
               </a>
               <p className="footer-text">
