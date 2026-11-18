@@ -117,7 +117,7 @@ const perks = ["High-performance PCs", "Fibre-fast internet", "Console stations"
 
 const stats = [
   { value: "40+", label: "Gaming stations" },
-  { value: "1 Gbps", label: "Fibre internet" },
+  { value: "20 Mbps", label: "Fibre internet" },
   { value: "7 days", label: "Open every day" },
   { value: "43+", label: "Graduates since 2019" },
 ];
@@ -269,7 +269,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="float-card float-card-one">
-                <span className="float-card-value">1 Gbps</span>
+                <span className="float-card-value">20 Mbps</span>
                 <span className="float-card-label">Fibre line</span>
               </div>
               <div className="float-card float-card-two">
