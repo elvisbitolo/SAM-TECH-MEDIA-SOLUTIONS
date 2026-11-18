@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { GraduationCap, Sparkles } from "lucide-react";
 import SiteHeader from "./components/site-header";
+import ScrollProgress from "./components/scroll-progress";
+import CountUp from "./components/count-up";
 import Reveal from "./components/reveal";
 import Gallery from "./components/gallery";
 import BookingForm from "./components/booking-form";
@@ -190,6 +192,7 @@ const steps = [
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <SiteHeader bookingUrl={defaultBookingUrl} />
 
       <main>
@@ -281,7 +284,9 @@ export default function Home() {
           <div className="container stats-grid">
             {stats.map((stat) => (
               <div className="stat" key={stat.label}>
-                <span className="stat-value gradient-text">{stat.value}</span>
+                <span className="stat-value gradient-text">
+                  <CountUp value={stat.value} />
+                </span>
                 <span className="stat-label">{stat.label}</span>
               </div>
             ))}
@@ -442,9 +447,7 @@ export default function Home() {
                 comfortable. Tap any photo for a closer look.
               </p>
             </Reveal>
-            <Reveal>
-              <Gallery />
-            </Reveal>
+            <Gallery />
           </div>
         </section>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const photos = [
@@ -23,6 +23,36 @@ const photos = [
 
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const items = gridRef.current?.querySelectorAll(".gallery-item");
+    if (!items?.length) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      items.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px" }
+    );
+
+    items.forEach((item, index) => {
+      item.style.setProperty("--reveal-delay", `${index * 110}ms`);
+      observer.observe(item);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (selected === null) return;
@@ -42,10 +72,10 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="gallery-grid">
+      <div className="gallery-grid" ref={gridRef}>
         {photos.map((photo, index) => (
           <button
-            className="gallery-item"
+            className="gallery-item reveal"
             type="button"
             key={photo.src}
             onClick={() => setSelected(index)}
